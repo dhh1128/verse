@@ -1,0 +1,31 @@
+descrip: start broker daemon
+flags:
+	help requested:
+		aliases: h, help
+# how do we represent "help" mode versus other modes?
+# is help even necessary? Wouldn't this be present in all cases?
+	verbose: 
+		aliases: v
+	trace:
+		hidden: true
+	password:
+		masked: true
+options:
+	log file:
+		placeholder: path
+		# call the url of a function in the code; could also be a closure
+		required: //url
+		default: null
+		validator: `File.exists(it)`
+# "it" is a groovy-ism and refers to the item being defined
+# backticks are the way to include code
+# scope is "this" (the cmdline obj)
+# validator can also be a regex using javascript syntax /.../
+	log level:
+		values: error, warning, debug, trace1, trace2, trace3
+		descrip: what level of logging should MWS use?
+		default: warning
+		position: 1
+	input file:
+		placeholder: path
+		repeatable: true

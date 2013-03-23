@@ -1,0 +1,5 @@
+semantics: abstract
+members:
+	inventory amount: final nonneg double
+	available amount: double
+	

@@ -1,0 +1,19 @@
+implements: Comparable<consumer>
+members:
+	weight: unsigned int = 0
+	child id: final str
+	display name: str
+	parent: weakref obj
+	reservations: []
+	required resources: [] 
+
+methods:
+	ctor.1: [id]
+	ctor.2: [id, display name]
+	adjust weight: [delta: int]
+	bind task: [reservation:]
+	release all resources:
+	require resource: [class: Class<? extends resource>, amount: positive double]
+		returns: task:
+	to string: override
+		

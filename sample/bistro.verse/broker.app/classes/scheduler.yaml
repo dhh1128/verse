@@ -1,0 +1,10 @@
+descrip: allocates resources to consumers
+members:
+	name: final str
+	version: final int
+	job queue: final
+	inventory: final
+semantics: singleton, phoenix
+methods:
+	allocate
+

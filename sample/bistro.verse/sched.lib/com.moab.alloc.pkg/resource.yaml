@@ -1,0 +1,10 @@
+members:
+	resource: weakref
+	consumer: weakref
+	amount: nonneg double
+	start time: date
+	end time: date
+# Allocate a {@link resource} on behalf of a {@link consumer}, for a specified
+# time interval.
+ctor: [resource: nonnull, consumer: nonnull, amount: positive double, start time, end time: {precondition]
+
